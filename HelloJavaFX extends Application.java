@@ -10,7 +10,7 @@ public class HelloJavaFX extends Application {
         String javaVer = System.getProperty("java.version");
         String javafxVer = System.getProperty("javafx.version");
         if (javafxVer == null) {
-            javafxVer = "Unknown";  // fallback
+            javafxVer = "Unknown"; 
         }
         Label lbl = new Label("Hello, JavaFX!\nJava version: " + javaVer + "\nJavaFX version: " + javafxVer);
         StackPane root = new StackPane(lbl);
@@ -24,3 +24,4 @@ public class HelloJavaFX extends Application {
         launch(args);
     }
 }
+
