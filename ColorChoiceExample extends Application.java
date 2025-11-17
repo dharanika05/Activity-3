@@ -16,7 +16,6 @@ public class ColorChoiceExample extends Application {
         choiceBox.setOnAction(e -> {
             String selected = choiceBox.getValue();
             lbl.setText("Selected color: " + selected);
-            // Optionally change text colour:
             switch (selected) {
                 case "Red": lbl.setTextFill(Color.RED); break;
                 case "Green": lbl.setTextFill(Color.GREEN); break;
@@ -39,3 +38,4 @@ public class ColorChoiceExample extends Application {
         launch(args);
     }
 }
+
