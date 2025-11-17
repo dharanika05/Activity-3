@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class StudentFormExample extends Application {
     @Override
     public void start(Stage primaryStage) {
-        // Controls
+    
         Label lblName = new Label("Name:");
         TextField tfName = new TextField();
 
@@ -31,8 +31,6 @@ public class StudentFormExample extends Application {
         TextArea taOutput = new TextArea();
         taOutput.setEditable(false);
         taOutput.setPrefHeight(150);
-
-        // Layout for form
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10));
         grid.setHgap(10);
@@ -75,3 +73,4 @@ public class StudentFormExample extends Application {
         launch(args);
     }
 }
+
