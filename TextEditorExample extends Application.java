@@ -10,7 +10,6 @@ import java.io.*;
 public class TextEditorExample extends Application {
     @Override
     public void start(Stage primaryStage) {
-        // MenuBar
         MenuBar menuBar = new MenuBar();
 
         Menu menuFile = new Menu("File");
@@ -21,7 +20,6 @@ public class TextEditorExample extends Application {
         menuFile.getItems().addAll(itemNew, itemOpen, itemSave, new SeparatorMenuItem(), itemExit);
 
         Menu menuEdit = new Menu("Edit");
-        // You can add Edit menu items (Cut, Copy, Paste) if you like
         MenuItem itemCut = new MenuItem("Cut");
         MenuItem itemCopy = new MenuItem("Copy");
         MenuItem itemPaste = new MenuItem("Paste");
@@ -32,11 +30,7 @@ public class TextEditorExample extends Application {
         menuHelp.getItems().add(itemAbout);
 
         menuBar.getMenus().addAll(menuFile, menuEdit, menuHelp);
-
-        // TextArea for editor
         TextArea textArea = new TextArea();
-
-        // Handlers
         itemExit.setOnAction(e -> {
             Platform.exit();
         });
@@ -81,8 +75,6 @@ public class TextEditorExample extends Application {
             alert.setContentText("Built with JavaFX");
             alert.showAndWait();
         });
-
-        // Layout
         BorderPane root = new BorderPane();
         root.setTop(menuBar);
         root.setCenter(textArea);
@@ -97,3 +89,4 @@ public class TextEditorExample extends Application {
         launch(args);
     }
 }
+
